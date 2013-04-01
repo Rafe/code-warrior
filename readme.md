@@ -2,7 +2,7 @@
 
 ## code like a warrior
 
-a platform to easily play algorithm questions online, in your own editor
+A platform to easily play algorithm questions online, in your own editor
 
 ## compatable
 
@@ -10,28 +10,28 @@ a platform to easily play algorithm questions online, in your own editor
 
 ## api
 
-    //start to write a question with score 400
-    code-warrior new -l 400
-    // or ask for question level than generate questions
+    //init project in directory
+    code-warrior init
 
-    code-warrior test
+    //login with github account
+    code-warrior login
+
+    //start to write a question with basic question
+    code-warrior new -l [basic|moderate|hard]
+
     //run test case locally
+    code-warrior test
 
-    code-warrior commit
     //commit the program, run tests on server side
-    //commit to gist
+    code-warrior commit
 
-## web interface
+    //open status page
+    code-warrior status
 
-+ log - check the question you have been answered
-+ answer on tested question
-+ score
-+ badge
-+ article
+## Todos:
 
-## future features
-
-+ gist compatible?
-+ login using github account?
++ running savely in vm
++ handle infinity loop
++ post as gist
++ recorded questions
 + scheduled round
-+ vs mode, debug for enemy
