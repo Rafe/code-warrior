@@ -1,0 +1,27 @@
+{
+  "name": "code-warrior",
+  "version": "0.0.1",
+  "description": "code like a warrior",
+  "bin": "./bin/code-warrior",
+  "dependencies": {
+    "expect.js": "~0.2.0",
+    "nopt": "~2.1.1",
+    "request": "~2.16.6",
+    "jade": "~0.28.2",
+    "nodemon": "~0.7.4",
+    "mkdirp": "~0.3.5",
+    "async": "~0.2.6",
+    "passport": "~0.1.16",
+    "github": "~0.1.8",
+    "read": "~1.0.4"
+  },
+  "devDependencies": {
+    "mocha": "~1.8.2"
+  },
+  "scripts": {
+    "test": "mocha arena"
+  },
+  "repository": "",
+  "author": "Jimmy Chao",
+  "license": "MIT"
+}

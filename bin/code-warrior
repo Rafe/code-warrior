@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var CodeWarrior = require('../lib'),
+    nopt = require('nopt'),
+    knownOpts = {
+      'level': ['basic', 'moderate', 'hard'],
+      'help': [Boolean],
+      'url': [String],
+      'stage': [Number]
+    } , shortHands = {
+      'l': ['--level'],
+      'h': ['--help'],
+      's': ['--stage'],
+      'u': ['--url']
+    }
+
+var parsed = nopt(knownOpts, shortHands, process.argv, 2);
+
+var command = parsed.argv.remain.shift() || 'test';
+
+parsed.url = parsed.url || 'http://code-warrior.herokuapp.com';
+
+if(Object.keys(CodeWarrior.commands).indexOf(command) !== -1) {
+  CodeWarrior.commands[command](parsed);
+} else {
+  console.log('no command')
+}

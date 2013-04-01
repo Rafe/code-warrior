@@ -1,0 +1,12 @@
+{
+  "name": "code-warrior-local",
+  "dependencies": {
+    "mocha": "*",
+    "expect": "*"
+  },
+  "level": {
+    "basic": [],
+    "moderate": [],
+    "hard": []
+  }
+}
