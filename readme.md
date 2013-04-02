@@ -11,27 +11,28 @@ A platform to easily play algorithm questions online, in your own editor
 ## api
 
     //init project in directory
-    code-warrior init
+    war init
 
     //login with github account
-    code-warrior login
+    war login
 
     //start to write a question with basic question
-    code-warrior new -l [basic|moderate|hard]
+    war new -l [basic|moderate|hard]
 
     //run test case locally
-    code-warrior test
+    war test
 
     //commit the program, run tests on server side
-    code-warrior commit
+    war commit
 
     //open status page
-    code-warrior status
+    war status
 
 ## Todos:
 
++ save answered question on server side
++ war list / search to show questions
++ add full topics
++ seperate questions into sub project
 + running savely in vm
 + handle infinity loop
-+ post as gist
-+ recorded questions
-+ scheduled round
