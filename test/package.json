@@ -6,11 +6,13 @@
   },
   "level": {
     "basic": [
-      1
+      1,
+      2
     ],
     "moderate": [],
     "hard": []
   },
   "id": 208840,
-  "cookie": "connect.sess=s%3Aj%3A%7B%22passport%22%3A%7B%7D%7D.i3rHZGR7uPIjpdbrQBaatwyVWI%2BmXdUI99Dw2hHFyaE; Path=/; HttpOnly"
+  "cookie": "connect.sess=s%3Aj%3A%7B%22passport%22%3A%7B%7D%7D.i3rHZGR7uPIjpdbrQBaatwyVWI%2BmXdUI99Dw2hHFyaE; Path=/; HttpOnly",
+  "token": "91062a8c0ecb17f6e9cd33aa7b4179c562acc056"
 }
