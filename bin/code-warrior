@@ -18,7 +18,7 @@ var parsed = nopt(knownOpts, shortHands, process.argv, 2);
 
 var command = parsed.argv.remain.shift() || 'test';
 
-parsed.url = parsed.url || 'http://code-warrior.herokuapp.com';
+parsed.url = parsed.url || process.env.URL ||  'http://code-warrior.herokuapp.com';
 
 if(Object.keys(CodeWarrior.commands).indexOf(command) !== -1) {
   CodeWarrior.commands[command](parsed);

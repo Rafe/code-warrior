@@ -2,7 +2,9 @@
   "name": "code-warrior",
   "version": "0.0.3",
   "description": "code like a warrior",
-  "bin": "./bin/code-warrior",
+  "bin": {
+    "war": "./bin/code-warrior"
+  },
   "dependencies": {
     "expect.js": "~0.2.0",
     "nopt": "~2.1.1",
@@ -13,7 +15,8 @@
     "async": "~0.2.6",
     "passport": "~0.1.16",
     "github": "~0.1.8",
-    "read": "~1.0.4"
+    "read": "~1.0.4",
+    "slug": "~0.2.2"
   },
   "devDependencies": {
     "mocha": "~1.8.2"
