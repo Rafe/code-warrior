@@ -14,6 +14,18 @@ var CodeWarrior = require('../lib'),
       'u': ['--url']
     }
 
+try {
+  var package = require(process.cwd() + '/package.json');
+} catch (e) {
+  console.log('please init the project');
+  return;
+}
+
+if (!package.id) {
+  console.log('please login');
+  return;
+}
+
 var parsed = nopt(knownOpts, shortHands, process.argv, 2);
 
 var command = parsed.argv.remain.shift() || 'test';
