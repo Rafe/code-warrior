@@ -6,7 +6,7 @@ var CodeWarrior = require('../lib'),
       'level': ['basic', 'moderate', 'hard'],
       'help': [Boolean],
       'url': [String],
-      'stage': [Number]
+      'stage': [Number],
     } , shortHands = {
       'l': ['--level'],
       'h': ['--help'],

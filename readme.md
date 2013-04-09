@@ -8,6 +8,12 @@ A platform to easily play algorithm questions online, in your own editor
 
 + javascript
 
+### Todo
+
++ ruby
++ python
++ java
+
 ## api
 
     //init project in directory
@@ -30,9 +36,8 @@ A platform to easily play algorithm questions online, in your own editor
 
 ## Todos:
 
-+ save answered question on server side
-+ war list / search to show questions
++ save answered question on server side, count score only once
++ war -h : show helps
 + add full topics
-+ seperate questions into sub project
 + running savely in vm
 + handle infinity loop

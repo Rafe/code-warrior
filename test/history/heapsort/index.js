@@ -21,6 +21,4 @@ var heapsort = function(array) {
   return buildHeap(array);
 }
 
-
-
 module.exports = heapsort;

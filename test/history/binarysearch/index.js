@@ -18,5 +18,3 @@ var binarysearch = function(array, element) {
 }
 
 module.exports = binarysearch;
-
-

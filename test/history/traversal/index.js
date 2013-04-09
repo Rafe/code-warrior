@@ -102,3 +102,14 @@ Tree.prototype.leveling = function() {
 
 exports.Tree = Tree;
 exports.Node = Node;
+
+var Chess = function(color, type) {
+  this.color = color;
+  this.type = type;
+}
+
+Chess.prototype = 
+
+var King = function() {
+
+}
