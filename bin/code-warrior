@@ -28,7 +28,14 @@ if (!package.id) {
 
 var parsed = nopt(knownOpts, shortHands, process.argv, 2);
 
-var command = parsed.argv.remain.shift() || 'test';
+var command = parsed.argv.remain.shift();
+
+if (!command && parsed.help) {
+  help()
+  return;
+} else if(!command){
+  command = 'test';
+}
 
 parsed.url = parsed.url || process.env.URL ||  'http://code-warrior.herokuapp.com';
 
@@ -36,4 +43,25 @@ if(Object.keys(CodeWarrior.commands).indexOf(command) !== -1) {
   CodeWarrior.commands[command](parsed);
 } else {
   console.log('no command')
+}
+
+function help() {
+  if (Math.random() > 0.5) {
+    console.log("(  ____ \\(  ___  )(  __  \\ (  ____ \\  |\\     /|(  ___  )(  ____ )(  ____ )\\__   __\/(  ___  )(  ____ )");
+    console.log("| (    \\/| (   ) || (  \\  )| (    \\/  | )   ( || (   ) || (    )|| (    )|   ) (   | (   ) || (    )|");
+    console.log("| |      | |   | || |   ) || (__      | | _ | || (___) || (____)|| (____)|   | |   | |   | || (____)|");
+    console.log("| |      | |   | || |   | ||  __)     | |( )| ||  ___  ||     __)|     __)   | |   | |   | ||     __)");
+    console.log("| |      | |   | || |   ) || (        | || || || (   ) || (\\ (   | (\\ (      | |   | |   | || (\\ (   ");
+    console.log("| (____/\\| (___) || (__/  )| (____/\\  | () () || )   ( || ) \\ \\__| ) \\ \\_____) (___| (___) || ) \\ \\__");
+    console.log("(_______/(_______)(______/ (_______/  (_______)|/     \\||/   \\__/|/   \\__/\\_______/(_______)|/   \\__/");
+  } else {
+    console.log(" /~~/~~\\ |~~\\ |~~  |  |  | /\\  |~~\\|~~\\~|~/~~\\ |~~\\");
+    console.log("|  |    ||   ||--  |  |  |/__\\ |__/|__/ ||    ||__/");
+    console.log(" \\__\\__/ |__/ |__   \\/ \\//    \\|  \\|  \\_|_\\__/ |  \\");
+  }
+
+  var commands = Object.keys(CodeWarrior.commands).join(', ');
+  console.log('commands: ' + commands);
+  console.log('default: test');
+  console.log('enter: war [command] -h   to see the helps');
 }
