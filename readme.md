@@ -1,18 +1,22 @@
-# Code Warrior!
+#Code Warrior !
 
-## code like a warrior
+A platform to practice algorithm questions, in your own editor.
 
-A platform to easily play algorithm questions online, in your own editor
+[Code Warrior Questions](http://github.com/Rafe/code-warrior-questions)
 
 ## compatable
 
 + javascript
 
-### Todo
+#### TBD
 
 + ruby
 + python
 + java
+
+## Installation
+
+    npm install -g code-warrior
 
 ## api
 
@@ -21,6 +25,9 @@ A platform to easily play algorithm questions online, in your own editor
 
     //login with github account
     war login
+
+    //show all questions
+    war list
 
     //start to write a question with basic question
     war new -l [basic|moderate|hard]
@@ -36,8 +43,8 @@ A platform to easily play algorithm questions online, in your own editor
 
 ## Todos:
 
-+ save answered question on server side, count score only once
-+ war -h : show helps
-+ add full topics
-+ running savely in vm
-+ handle infinity loop
++ [] complate question
++ [] add view page to view questions and answered record
++ [] switch to kue/worker structure to run code
++ [] running savely in vm
++ [] handle infinity loop
