@@ -43,8 +43,8 @@ A platform to practice algorithm questions, in your own editor.
 
 ## Todos:
 
-+ [] complate question
-+ [] add view page to view questions and answered record
-+ [] switch to kue/worker structure to run code
-+ [] running savely in vm
-+ [] handle infinity loop
++ complate questions
++ add view page to view questions and answered record
++ switch to kue/worker structure to run code
++ running savely in vm
++ handle infinity loop
