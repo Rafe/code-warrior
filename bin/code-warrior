@@ -14,18 +14,6 @@ var CodeWarrior = require('../lib'),
       'u': ['--url']
     }
 
-try {
-  var package = require(process.cwd() + '/package.json');
-} catch (e) {
-  console.log('please init the project');
-  return;
-}
-
-if (!package.id) {
-  console.log('please login');
-  return;
-}
-
 var parsed = nopt(knownOpts, shortHands, process.argv, 2);
 
 var command = parsed.argv.remain.shift();
@@ -37,12 +25,26 @@ if (!command && parsed.help) {
   command = 'test';
 }
 
+if(command !== 'generate' && command !== "list") {
+  try {
+    var package = require(process.cwd() + '/package.json');
+  } catch (e) {
+    console.log('please init the project');
+    return;
+  }
+
+  if (!package.id) {
+    console.log('please login');
+    return;
+  }
+}
+
 parsed.url = parsed.url || process.env.URL ||  'http://code-warrior.herokuapp.com';
 
 if(Object.keys(CodeWarrior.commands).indexOf(command) !== -1) {
   CodeWarrior.commands[command](parsed);
 } else {
-  console.log('no command')
+  console.log('no command');
 }
 
 function help() {
