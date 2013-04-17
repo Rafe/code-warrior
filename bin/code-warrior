@@ -2,6 +2,7 @@
 
 var CodeWarrior = require('../lib'),
     nopt = require('nopt'),
+    read = require('read'),
     knownOpts = {
       'level': ['basic', 'moderate', 'hard'],
       'help': [Boolean],
@@ -25,16 +26,18 @@ if (!command && parsed.help) {
   command = 'test';
 }
 
-if(command !== 'generate' && command !== "list") {
+if(command !== 'generate' && command !== "list" && command !== 'init') {
   try {
     var package = require(process.cwd() + '/package.json');
+    var config = require(process.cwd() + '/.config.json');
   } catch (e) {
-    console.log('please init the project');
-    return;
-  }
-
-  if (!package.id) {
-    console.log('please login');
+    read({ prompt: "init project required, \ndo you want to init project in current directory? (y/n)" }, function(err, answer){
+      if (answer.toLowerCase() == 'y' || answer.toLowerCase() == 'yes') {
+        CodeWarrior.commands.init({});
+      } else {
+        console.log(command + ' failed');
+      }
+    });
     return;
   }
 }
