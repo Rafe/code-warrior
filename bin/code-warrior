@@ -44,7 +44,6 @@ if(command !== 'generate' && command !== "list" && command !== 'init') {
   }
 }
 
-
 if(Object.keys(CodeWarrior.commands).indexOf(command) !== -1) {
   CodeWarrior.commands[command](parsed);
 } else {
