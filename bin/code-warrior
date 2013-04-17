@@ -17,6 +17,8 @@ var CodeWarrior = require('../lib'),
 
 var parsed = nopt(knownOpts, shortHands, process.argv, 2);
 
+parsed.url = parsed.url || process.env.URL ||  'http://code-warrior.herokuapp.com';
+
 var command = parsed.argv.remain.shift();
 
 if (!command && parsed.help) {
@@ -33,7 +35,7 @@ if(command !== 'generate' && command !== "list" && command !== 'init') {
   } catch (e) {
     read({ prompt: "init project required, \ndo you want to init project in current directory? (y/n)" }, function(err, answer){
       if (answer.toLowerCase() == 'y' || answer.toLowerCase() == 'yes') {
-        CodeWarrior.commands.init({});
+        CodeWarrior.commands.init(parsed);
       } else {
         console.log(command + ' failed');
       }
@@ -42,7 +44,6 @@ if(command !== 'generate' && command !== "list" && command !== 'init') {
   }
 }
 
-parsed.url = parsed.url || process.env.URL ||  'http://code-warrior.herokuapp.com';
 
 if(Object.keys(CodeWarrior.commands).indexOf(command) !== -1) {
   CodeWarrior.commands[command](parsed);
@@ -68,5 +69,5 @@ function help() {
   var commands = Object.keys(CodeWarrior.commands).join(', ');
   console.log('commands: ' + commands);
   console.log('default: test');
-  console.log('enter: war [command] -h   to see the helps');
+  console.log('enter: war [command] -h  to see the helps');
 }

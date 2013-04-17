@@ -1,6 +1,6 @@
 {
   "name": "code-warrior",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "code like a warrior",
   "bin": {
     "war": "./bin/code-warrior"
