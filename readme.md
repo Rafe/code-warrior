@@ -4,47 +4,60 @@ A platform to practice algorithm questions, in your own editor.
 
 [Code Warrior Questions](http://github.com/Rafe/code-warrior-questions)
 
-## compatable
+## Usage
 
-+ javascript
-
-#### TBD
-
-+ ruby
-+ python
-+ java
-
-## Installation
+First, install by npm:
 
     npm install -g code-warrior
 
-## api
+You can check the commands with node-warrior executable:
 
-    //init project in directory
+    war -h
+
+And create a new directory for questions, and init project
+
     war init
 
-    //login with github account
+Enter github username and password to register on code-warrior
+
+And
+
+    war new -l basic
+
+Download question to ./arena folder, start to practicing algorithm !
+
+## Api
+
+### Init project
+
+    war init
+
+### Login with github account
+
     war login
 
-    //show all questions
+### List all questions
+
     war list
 
-    //start to write a question with basic question
+### Download questions
+
     war new -l [basic|moderate|hard]
 
-    //run test case locally
+### Test
+
     war test
 
-    //commit the program, run tests on server side
+### Commit
+
     war commit
 
-    //open status page
+### Status page
+
     war status
 
 ## Todos:
 
-+ complate questions
-+ add view page to view questions and answered record
 + switch to kue/worker structure to run code
 + running savely in vm
 + handle infinity loop
