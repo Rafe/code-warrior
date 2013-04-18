@@ -55,3 +55,7 @@ Download question to ./arena folder, start to practicing algorithm !
 ### Status page
 
     war status
+
+##LICENCE : [MIT](http://opensource.org/licenses/MIT)
+
+
