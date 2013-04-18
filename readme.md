@@ -55,9 +55,3 @@ Download question to ./arena folder, start to practicing algorithm !
 ### Status page
 
     war status
-
-## Todos:
-
-+ switch to kue/worker structure to run code
-+ running savely in vm
-+ handle infinity loop
