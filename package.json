@@ -1,6 +1,6 @@
 {
   "name": "code-warrior",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "code like a warrior",
   "keywords": [ "algorithm", "interview", "code", "warrior" ],
   "bin": {
